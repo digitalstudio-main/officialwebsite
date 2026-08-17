@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login — Digital Studio</title>
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="back-link js-back" data-fallback="index.html">← Back</a>
+      <div class="brand">
+        <img src="logo.png" alt="Digital Studio logo">
+        <span>Digital Studio</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="selector-panel" style="padding-top:80px;">
+    <div class="container">
+      <div class="selector-box">
+        <h3>Admin Login</h3>
+        <p>Only for the Digital Studio owner — sign in to add and manage products.</p>
+        <form id="ds-login-form">
+          <div class="field">
+            <label for="uid">User ID</label>
+            <input type="text" id="uid" autocomplete="username" required style="width:100%;padding:14px 16px;border-radius:10px;border:1.5px solid var(--line);">
+          </div>
+          <div class="field">
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" autocomplete="current-password" required style="width:100%;padding:14px 16px;border-radius:10px;border:1.5px solid var(--line);">
+          </div>
+          <button type="submit" class="btn">Log in</button>
+          <p class="hint" id="ds-login-error" style="color:var(--magenta);display:none;">Incorrect User ID or Password.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+  <script>
+    // Client-side check only — see the note in README about this
+    // not being real security if the repo hosting this is public.
+    const DS_ADMIN_USER = "Digital Studio";
+    const DS_ADMIN_PASS = "Joy@732122";
+
+    document.getElementById("ds-login-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      const u = document.getElementById("uid").value.trim();
+      const p = document.getElementById("pwd").value;
+      const errorMsg = document.getElementById("ds-login-error");
+      if(u === DS_ADMIN_USER && p === DS_ADMIN_PASS){
+        sessionStorage.setItem("ds_admin", "true");
+        window.location.href = "index.html";
+      } else {
+        errorMsg.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

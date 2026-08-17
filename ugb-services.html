@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGB Related Services — Digital Studio</title>
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page-title="UGB Related Services">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="back-link js-back" data-fallback="index.html">← Back</a>
+      <div class="top-actions">
+        <a href="admin-login.html" id="ds-admin-login-pill" class="admin-pill">Admin Login</a>
+        <div id="ds-admin-status-pill" class="admin-status" style="display:none;">Admin mode <button>Log out</button></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="breadcrumb">University of Gour Banga</span>
+      <h1>UGB Related Services</h1>
+      <p>Semester-wise notes for Political Science and Bengali, built to match the actual UGB syllabus — not generic material copied from somewhere else.</p>
+    </div>
+  </section>
+
+  <section class="info-panel">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">About the University</span>
+        <h2>University of Gour Banga</h2>
+        <p>Established in 2008, University of Gour Banga (UGB) is a state university located in Malda, West Bengal, set up to expand higher education access across North Bengal. A number of affiliated degree colleges across the region conduct undergraduate and postgraduate teaching under the university, following its syllabus and examination system — which is exactly what these notes are built around.</p>
+      </div>
+      <div class="fact-grid">
+        <div class="fact-card"><b>2008</b><span>Year of establishment</span></div>
+        <div class="fact-card"><b>Malda, WB</b><span>Home district of the university</span></div>
+        <div class="fact-card"><b>Multiple</b><span>Affiliated degree colleges across North Bengal</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="selector-panel">
+    <div class="container">
+      <div class="selector-box">
+        <h3>Find your notes</h3>
+        <p>Pick your semester and subject to go straight to that page.</p>
+        <form id="ds-ugb-form">
+          <div class="field">
+            <label for="semester">Select your semester</label>
+            <select id="semester" required>
+              <option value="" disabled selected>Choose semester</option>
+              <option value="1">Semester I</option>
+              <option value="2">Semester II</option>
+              <option value="3">Semester III</option>
+              <option value="4">Semester IV</option>
+              <option value="5">Semester V</option>
+              <option value="6">Semester VI</option>
+              <option value="7">Semester VII</option>
+              <option value="8">Semester VIII</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="subject">Select your subject</label>
+            <select id="subject" required>
+              <option value="" disabled selected>Choose subject</option>
+              <option value="bengali-major">Bengali Major</option>
+              <option value="bengali-minor">Bengali Minor</option>
+              <option value="bengali-mdc">Bengali MDC</option>
+              <option value="political-science-major">Political Science Major</option>
+              <option value="political-science-minor">Political Science Minor</option>
+              <option value="political-science-mdc">Political Science MDC</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+          <p class="hint">You'll be taken straight to the notes page for that semester and subject.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Digital Studio. All rights reserved.</span>
+        <span>Designed &amp; built with care in India.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.getElementById("ds-ugb-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      const sem = document.getElementById("semester").value;
+      const subj = document.getElementById("subject").value;
+      if(!sem || !subj) return;
+      window.location.href = `sem${sem}-${subj}.html`;
+    });
+  </script>
+</body>
+</html>

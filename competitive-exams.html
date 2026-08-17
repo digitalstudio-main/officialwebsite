@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competitive Exams Services — Digital Studio</title>
+<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page-key="competitive-exams" data-page-title="Competitive Exams Services">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="back-link js-back" data-fallback="index.html">← Back</a>
+      <div class="top-actions">
+        <a href="admin-login.html" id="ds-admin-login-pill" class="admin-pill">Admin Login</a>
+        <div id="ds-admin-status-pill" class="admin-status" style="display:none;">Admin mode <button>Log out</button></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="breadcrumb">Government Exam Preparation</span>
+      <h1>Competitive Exams Services</h1>
+      <p>Classes, notes and quizzes for the exams that actually matter to central government job aspirants — SSC and Railway recruitment.</p>
+    </div>
+  </section>
+
+  <section class="info-panel" style="padding-bottom:10px;">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Exams we cover</span>
+        <h2>SSC &amp; Railway recruitment</h2>
+      </div>
+      <div class="fact-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="fact-card"><b>SSC</b><span>CGL, CHSL, MTS, GD, Stenographer, Selection Post</span></div>
+        <div class="fact-card"><b>Railway (RRB)</b><span>NTPC, Group D, ALP, JE, Technical</span></div>
+        <div class="fact-card"><b>RPF</b><span>SI &amp; Constable</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-panel">
+    <div class="container">
+      <div class="products-toolbar">
+        <h2>Classes, notes &amp; quizzes</h2>
+      </div>
+      <div class="product-grid" id="ds-product-grid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Digital Studio. All rights reserved.</span>
+        <span>Designed &amp; built with care in India.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="ds-know-modal">
+    <div class="modal-box">
+      <button class="modal-close">✕</button>
+      <div class="thumb-preview" style="margin-bottom:14px;"><img class="km-image" src=""></div>
+      <h3 class="km-title"></h3>
+      <p class="km-price" style="font-weight:700;color:var(--navy);"></p>
+      <p class="km-desc"></p>
+      <div class="modal-actions">
+        <a class="btn km-buy" target="_blank" rel="noopener">Buy on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="ds-product-modal">
+    <div class="modal-box">
+      <button class="modal-close">✕</button>
+      <h3 class="pm-title">Add product</h3>
+      <label>Product name</label>
+      <input type="text" name="name" placeholder="e.g. SSC CGL Tier 1 Full Course">
+      <label>Price (₹)</label>
+      <input type="number" name="price" placeholder="e.g. 499">
+      <label>Description (shown in Know More)</label>
+      <textarea name="desc" placeholder="What's included, syllabus covered, format, etc."></textarea>
+      <label>Image</label>
+      <input type="file" name="imagefile" accept="image/*">
+      <div class="thumb-preview"><span class="ph-icon">🖼️ Image preview</span></div>
+      <div class="modal-actions">
+        <button class="btn pm-save">Save</button>
+        <button class="btn btn-ghost pm-delete" style="display:none;">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
