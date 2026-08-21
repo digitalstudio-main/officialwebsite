@@ -93,6 +93,28 @@
     </div>
   </div>
 
+
+  <div class="modal-overlay" id="ds-product-modal">
+    <div class="modal-box">
+      <button class="modal-close">✕</button>
+      <h3 class="pm-title">Add product</h3>
+      <label>Product name</label>
+      <input type="text" name="name" placeholder="e.g. SSC CGL Tier 1 Full Course">
+      <label>Price (₹)</label>
+      <input type="number" name="price" placeholder="e.g. 499">
+      <label>Description (shown in Know More)</label>
+      <textarea name="desc" placeholder="What's included, syllabus covered, format, etc."></textarea>
+      <label>Image</label>
+      <input type="file" name="imagefile" accept="image/*">
+      <div class="thumb-preview"><span class="ph-icon">🖼️ Image preview</span></div>
+      <div class="modal-actions">
+        <button class="btn pm-save">Save</button>
+        <button class="btn btn-ghost pm-delete" style="display:none;">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  
   <script src="main.js"></script>
   <script src="products.js"></script>
 </body>
